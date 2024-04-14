@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css">
+    <script src="game.js"></script>
+    <title>حجرة ورقة مقص</title>
+</head>
+<body>
+ <section>
+    <div class="container">
+        <div class="theGame">
+            <div class="header">
+               Rock Paper Sesors GAME
+            </div>
+            <div class="chooseButtons">
+                <button onclick="
+                    cmp_move('rock');
+                    " class="but-rock"></button>
+   
+                <button onclick="
+                    cmp_move('paper');
+                    " class="but-paper"></button>
+       
+                <button onclick="
+                    cmp_move('scissors');
+                    " class="but-sesers"></button>
+        </div>
+        <div class="result">
+            <p class="theChoose"></p>
+            <p class="theResult"></p>
+            <p class="theScore"></p>
+        </div>
+        <div class="score">
+            <button onclick="
+                score.wins=0;
+                score.loses=0;
+                score.same=0;
+                localStorage.removeItem('score');
+                document.querySelector('.theScore').innerHTML=`wins : ${score.wins} , loses : ${score.loses} , ties : ${score.same}`;
+                document.querySelector('.theResult').innerHTML=``;
+                document.querySelector('.theChoose').innerHTML = ``;
+                ">resut</button>
+        </div>
+    </div>
+ </section>
+</body>
+</html>
